@@ -1,0 +1,47 @@
+.container {
+	width: 600px;
+	margin: 0px auto;
+	border: solid #337ab7 1px;
+	margin-bottom: 20px;
+}
+
+.container .heading {
+	background-color: #337ab7;
+	color: white;
+	padding: 8px;
+}
+
+.body {
+	padding: 10px;
+}
+
+.form-group {
+	width: 100%;
+}
+
+.form-group label, .form-group input, .form-group select {
+	width: 99%;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.btn-success {
+	background-color: green;
+	border: none;
+	padding: 8px;
+	color: white;
+}
+
+.btn-warning {
+	background-color: orange;
+	border: none;
+	padding: 8px;
+	color: black;
+}
+
+.btn-danger {
+	background-color: red;
+	border: none;
+	padding: 8px;
+	color: black;
+}

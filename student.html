@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quan Ly Thong Tin Sinh Vien - Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<div class="heading">
+		Input Product Detail Information
+	</div>
+	<div class="body">
+		<form method="post" onsubmit="return saveData();">
+			<div class="form-group">
+				<label>Product Name:</label>
+				<input required type="text" name="product_name" id="product_id">
+			</div>
+			<div class="form-group">
+				<label>Manufacturer Name:</label>
+				<select required name="manufacturer_name" id="manufacturer_id" onchange="changeManufacturer()">
+					<option value="">-- Select --</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Category:</label>
+				<select required name="category_name" id="category_id">
+					<option value="">-- Select --</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Price:</label>
+				<input required type="number" name="price_name" id="price_id" onkeyup="updateTotalPrice()">
+			</div>
+			<div class="form-group">
+				<label>Quanity:</label>
+				<input required type="number" name="quanlity_name" id="quanlity_id" onkeyup="updateTotalPrice()">
+			</div>
+			<div class="form-group">
+				<label>Total Price:</label>
+				<input disabled type="number" name="total_price" id="total_price_id">
+			</div>
+			<div class="form-group">
+				<button class="btn-success" type="submit">Save Product</button>
+				<button class="btn-warning" type="reset">Reset</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="container">
+	<div class="heading">
+		Product Management
+	</div>
+	<div class="body">
+		<table style="width: 100%" border="1" cellpadding="5" cellspacing="0">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Product Name</th>
+					<th>Manufacturer Name</th>
+					<th>Category Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<!-- Chua danh sach san pham da them vao -->
+			<tbody id="result"></tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
